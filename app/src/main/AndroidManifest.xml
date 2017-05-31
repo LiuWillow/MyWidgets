@@ -19,6 +19,9 @@
             </intent-filter>
         </activity>
         <activity android:name=".chat.MsgActivity"/>
+        <activity android:name=".chenjintb.ChengjinActivity"
+            android:screenOrientation="reverseLandscape"
+            />
     </application>
 
 </manifest>

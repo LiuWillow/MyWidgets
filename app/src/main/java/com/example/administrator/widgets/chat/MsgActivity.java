@@ -14,6 +14,8 @@ import com.example.administrator.widgets.R;
 import java.util.ArrayList;
 import java.util.List;
 
+import me.drakeet.materialdialog.MaterialDialog;
+
 /**
  * Created by Administrator on 2017/5/30.
  */
@@ -29,11 +31,32 @@ public class MsgActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.liaotian_layout);
         initMsgs();
+         final MaterialDialog materialDialog = new MaterialDialog(MsgActivity.this)
+                .setMessage("是否保存消息")
+                 .setPositiveButton("是", new View.OnClickListener() {
+                    @Override
+                    public void onClick(View v) {
+                        Toast.makeText(MsgActivity.this,"保存成功",Toast.LENGTH_SHORT);
+                    }
+                })
+                .setNegativeButton("否", new View.OnClickListener() {
+                    @Override
+                    public void onClick(View v) {
+                    }
+                })
+                 .setCanceledOnTouchOutside(true);
+
         inputText = (EditText)findViewById(R.id.input_text);
         send = (Button)findViewById(R.id.send_btn);
         recyclerView = (RecyclerView)findViewById(R.id.msg_recycle);
         adapter = new MsgAdapter(msgList);
-
+        inputText.setOnLongClickListener(new View.OnLongClickListener() {
+            @Override
+            public boolean onLongClick(View v) {
+                materialDialog.show();
+                return true;
+            }
+        });
         send.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
