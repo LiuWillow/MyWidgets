@@ -11,6 +11,7 @@ import android.widget.Button;
 
 import com.example.administrator.widgets.chat.MsgActivity;
 import com.example.administrator.widgets.chenjintb.ChengjinActivity;
+import com.example.administrator.widgets.imgloader.LoadActivity;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -23,6 +24,7 @@ public class MainActivity extends AppCompatActivity {
             View decorView = getWindow().getDecorView();
             int option = View.SYSTEM_UI_FLAG_FULLSCREEN | View.SYSTEM_UI_FLAG_LAYOUT_STABLE;
             decorView.setSystemUiVisibility(option);
+            getWindow().setNavigationBarColor(Color.TRANSPARENT);
             getWindow().setStatusBarColor(Color.TRANSPARENT);
         }
         ActionBar actionBar = getSupportActionBar();
@@ -36,6 +38,11 @@ public class MainActivity extends AppCompatActivity {
 
     public void goChenjinActivity(View view){
         Intent intent = new Intent(MainActivity.this, ChengjinActivity.class);
+        startActivity(intent);
+    }
+
+    public void goLoadActivity(View view){
+        Intent intent = new Intent(MainActivity.this, LoadActivity.class);
         startActivity(intent);
     }
 

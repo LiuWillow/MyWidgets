@@ -17,7 +17,7 @@
             android:layout_height="match_parent">
             <ImageView
                 android:id="@+id/fruit_imageview"
-                android:src="@drawable/nav_icon"
+                android:src="@mipmap/nav_icon"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:scaleType="centerCrop"

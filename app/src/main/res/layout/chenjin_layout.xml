@@ -5,7 +5,7 @@
     <ImageView
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:src="@drawable/nav_icon"
+        android:src="@mipmap/nav_icon"
         android:scaleType="centerCrop"
         />
 </RelativeLayout>
