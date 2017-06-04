@@ -25,13 +25,8 @@ import java.net.URL;
 public class DownloadImgUtils
 {
 
-    /**
-     * 根据url下载图片在指定的文件
-     *
-     * @param urlStr
-     * @param file
-     * @return
-     */
+    //根据url下载图片在指定的文件
+
     public static boolean downloadImgByUrl(String urlStr, File file)
     {
         FileOutputStream fos = null;
@@ -78,13 +73,8 @@ public class DownloadImgUtils
 
     }
 
-    /**
-     * 根据url下载图片在指定的文件
-     *
-     * @param urlStr
-     * @param imageview
-     * @return
-     */
+   //根据url下载图片并压缩为imageview宽高的bitmap
+
     public static Bitmap downloadImgByUrl(String urlStr, ImageView imageview)
     {
         FileOutputStream fos = null;

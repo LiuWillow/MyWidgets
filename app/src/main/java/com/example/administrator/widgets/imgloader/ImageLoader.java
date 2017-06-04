@@ -28,31 +28,24 @@ public class ImageLoader
 {
     private static ImageLoader mInstance;
 
-    /**
-     * 图片缓存的核心对象
-     */
+
+
     private LruCache<String, Bitmap> mLruCache;
-    /**
-     * 线程池
-     */
+
+    //线程池
+
     private ExecutorService mThreadPool;
     private static final int DEAFULT_THREAD_COUNT = 3;
-    /**
-     * 队列的调度方式
-     */
+    //队列的调度方式
+
     private Type mType = Type.LIFO;
-    /**
-     * 任务队列
-     */
+    //任务队列
+
     private LinkedList<Runnable> mTaskQueue;
-    /**
-     * 后台轮询线程
-     */
+
     private Thread mPoolThread;
     private Handler mPoolThreadHandler;
-    /**
-     * UI线程中的Handler
-     */
+
     private Handler mUIHandler;
 
     private Semaphore mSemaphorePoolThreadHandler = new Semaphore(0);
@@ -72,12 +65,7 @@ public class ImageLoader
         init(threadCount, type);
     }
 
-    /**
-     * 初始化
-     *
-     * @param threadCount
-     * @param type
-     */
+
     private void init(int threadCount, Type type)
     {
         initBackThread();
@@ -102,9 +90,8 @@ public class ImageLoader
         mSemaphoreThreadPool = new Semaphore(threadCount);
     }
 
-    /**
-     * 初始化后台轮询线程
-     */
+   //初始化后台轮询线程
+
     private void initBackThread()
     {
         // 后台轮询线程
@@ -155,12 +142,8 @@ public class ImageLoader
 
 
 
-    /**
-     * 根据path为imageview设置图片
-     *
-     * @param urlString
-     * @param imageView
-     */
+    //根据url为imageview设置图片
+
     public void loadImage(final String urlString, final ImageView imageView,
                           final boolean isFromNet)
     {
@@ -186,7 +169,7 @@ public class ImageLoader
         }
 
         // 根据path在缓存中获取bitmap
-        Bitmap bm = getBitmapFromLruCache(urlString);
+        Bitmap bm = getBitmapFromLruCache(md5(urlString));
 
         if (bm != null)
         {
@@ -198,14 +181,7 @@ public class ImageLoader
 
     }
 
-    /**
-     * 根据传入的参数，新建一个任务
-     *
-     * @param urlString
-     * @param imageView
-     * @param isFromNet
-     * @return
-     */
+    //根据传入的参数，新建一个任务
     private Runnable buildTask(final String urlString, final ImageView imageView,
                                final boolean isFromNet)
     {
@@ -275,11 +251,8 @@ public class ImageLoader
         return bm;
     }
 
-    /**
-     * 从任务队列取出一个方法
-     *
-     * @return
-     */
+    //从任务队列取出一个方法
+
     private Runnable getTask()
     {
         if (mType == Type.FIFO)
@@ -292,12 +265,7 @@ public class ImageLoader
         return null;
     }
 
-    /**
-     * 利用签名辅助类，将字符串字节数组
-     *
-     * @param str
-     * @return
-     */
+   //返回Md5
     public String md5(String str)
     {
         byte[] digest = null;
@@ -314,12 +282,6 @@ public class ImageLoader
         return null;
     }
 
-    /**
-     * 方式二
-     *
-     * @param bytes
-     * @return
-     */
     public String bytes2hex02(byte[] bytes)
     {
         StringBuilder sb = new StringBuilder();
@@ -351,29 +313,20 @@ public class ImageLoader
         mUIHandler.sendMessage(message);
     }
 
-    /**
-     * 将图片加入LruCache
-     *
-     * @param path
-     * @param bm
-     */
+    //将图片加入LruCache
+
     protected void addBitmapToLruCache(String path, Bitmap bm)
     {
-        if (getBitmapFromLruCache(path) == null)
+        if (getBitmapFromLruCache(md5(path)) == null)
         {
             if (bm != null)
                 mLruCache.put(path, bm);
         }
     }
 
-    /**
-     * 根据图片需要显示的宽和高对图片进行压缩
-     *
-     * @param path
-     * @param width
-     * @param height
-     * @return
-     */
+
+     //根据图片需要显示的宽和高对图片进行压缩
+
     protected Bitmap decodeSampledBitmapFromPath(String path, int width,
                                                  int height)
     {
@@ -405,13 +358,9 @@ public class ImageLoader
         mPoolThreadHandler.sendEmptyMessage(0x110);
     }
 
-    /**
-     * 获得缓存图片的地址
-     *
-     * @param context
-     * @param uniqueName
-     * @return
-     */
+
+     //获得缓存图片的地址
+
     public File getDiskCacheDir(Context context, String uniqueName)
     {
         String cachePath;
@@ -426,14 +375,12 @@ public class ImageLoader
         return new File(cachePath + File.separator + uniqueName);
     }
 
-    /**
-     * 根据path在缓存中获取bitmap
-     *
-     * @param key
-     * @return
-     */
+
+     //根据path在缓存中获取bitmap
+
     private Bitmap getBitmapFromLruCache(String key)
     {
+
         return mLruCache.get(key);
     }
 

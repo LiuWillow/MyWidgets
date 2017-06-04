@@ -8,9 +8,6 @@ import android.view.ViewGroup;
 import android.widget.ImageView;
 
 import com.example.administrator.widgets.R;
-import com.example.administrator.widgets.myimgloader.*;
-
-import java.util.zip.Inflater;
 
 /**
  * Created by Administrator on 2017/6/3.

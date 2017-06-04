@@ -14,14 +14,8 @@ import java.lang.reflect.Field;
 
 public class ImageSizeUtil
 {
-    /**
-     * 根据需求的宽和高以及图片实际的宽和高计算SampleSize
-     *
-     * @param options
-     * @param reqWidth
-     * @param reqHeight
-     * @return
-     */
+    //根据需求的宽和高以及图片实际的宽和高计算SampleSize
+
     public static int caculateInSampleSize(BitmapFactory.Options options, int reqWidth,
                                            int reqHeight)
     {
@@ -41,12 +35,8 @@ public class ImageSizeUtil
         return inSampleSize;
     }
 
-    /**
-     * 根据ImageView获适当的压缩的宽和高
-     *
-     * @param imageView
-     * @return
-     */
+    //根据ImageView获适当的压缩的宽和高
+
     public static ImageSize getImageViewSize(ImageView imageView)
     {
 
@@ -97,13 +87,8 @@ public class ImageSizeUtil
         int height;
     }
 
-    /**
-     * 通过反射获取imageview的某个属性值
-     *
-     * @param object
-     * @param fieldName
-     * @return
-     */
+    //通过反射获取imageview的某个属性值
+
     private static int getImageViewFieldValue(Object object, String fieldName)
     {
         int value = 0;
