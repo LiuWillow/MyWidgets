@@ -15,9 +15,14 @@
         android:onClick="goChenjinActivity"
         />
     <Button
-        android:text="加载"
+        android:text="加载图片"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:onClick="goLoadActivity"
         />
+    <Button
+        android:text="芝麻积分"
+        android:onClick="goZhimaActivity"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
 </LinearLayout>

@@ -23,6 +23,9 @@
         <activity android:name=".chat.MsgActivity"/>
         <activity android:name=".chenjintb.ChengjinActivity" />
         <activity android:name=".imgloader.LoadActivity"/>
+        <activity android:name=".zhima.ZhimaActivity"
+            android:hardwareAccelerated="false"
+            />
     </application>
 
 </manifest>

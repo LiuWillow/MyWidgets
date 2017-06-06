@@ -12,6 +12,7 @@ import android.widget.Button;
 import com.example.administrator.widgets.chat.MsgActivity;
 import com.example.administrator.widgets.chenjintb.ChengjinActivity;
 import com.example.administrator.widgets.imgloader.LoadActivity;
+import com.example.administrator.widgets.zhima.ZhimaActivity;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -43,6 +44,11 @@ public class MainActivity extends AppCompatActivity {
 
     public void goLoadActivity(View view){
         Intent intent = new Intent(MainActivity.this, LoadActivity.class);
+        startActivity(intent);
+    }
+
+    public void goZhimaActivity(View view){
+        Intent intent = new Intent(MainActivity.this, ZhimaActivity.class);
         startActivity(intent);
     }
 
