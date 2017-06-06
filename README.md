@@ -7,12 +7,19 @@
 
 
 ## Screenshots
+聊天对话框界面：
 <img src="screenshots/liaotian.gif" width="330"  hspace="20">
-<img src="screenshots/chenjinshi" width="330"  hspace="20">
+<br>
+沉浸式toolbar：
+<img src="screenshots/chenjinshi.gif" width="330"  hspace="20">
+<br>
+图片加载框架：
 <img src="screenshots/jiazai.gif" width="330"  hspace="20">
+<br>
+芝麻积分view：
 <img src="screenshots/zhima.gif" width="330"  hspace="20">
 
-
+<br><br>
 ## About Me
 一个不务正业自学安卓半年多的大三工科生- - 对安卓开发有着浓厚的兴趣
 
