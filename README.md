@@ -7,23 +7,20 @@
 
 
 ## Screenshots
-<p>聊天对话框界面：
+
 <img src="screenshots/liaotian.gif" width="330"  hspace="20">
-</p>
 
-<p>沉浸式toolbar：
+
 <img src="screenshots/chenjinshi.gif" width="330"  hspace="20">
-</p>
 
-<p>
-图片加载框架：
+
+
 <img src="screenshots/jiazai.gif" width="330"  hspace="20">
-</p>
 
-<p>
-芝麻积分view：
+
+
 <img src="screenshots/zhima.gif" width="330"  hspace="20">
-</p>
+
 
 <br><br>
 ## About Me
