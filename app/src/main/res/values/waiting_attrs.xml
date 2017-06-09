@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <declare-styleable name="RollSquareView">
+        <attr name="half_rect_width" format="dimension"/>
+        <attr name="rect_divier_width" format="dimension"/>
+        <attr name="start_empty_position" format="dimension"/>
+        <attr name="is_clockwise" format="boolean"/>
+        <attr name="line_count" format="integer"/>
+        <attr name="roll_speed" format="integer"/>
+        <attr name="square_color" format="color"/>
+        <attr name="roll_round_cornor" format="float"/>
+        <attr name="fix_round_cornor" format="float"/>
+        <attr name="roll_interpolator" format="reference"/>
+    </declare-styleable>
+</resources>

@@ -12,6 +12,7 @@ import android.widget.Button;
 import com.example.administrator.widgets.chat.MsgActivity;
 import com.example.administrator.widgets.chenjintb.ChengjinActivity;
 import com.example.administrator.widgets.imgloader.LoadActivity;
+import com.example.administrator.widgets.waiting.WaitingActivity;
 import com.example.administrator.widgets.zhima.ZhimaActivity;
 
 public class MainActivity extends AppCompatActivity {
@@ -49,6 +50,11 @@ public class MainActivity extends AppCompatActivity {
 
     public void goZhimaActivity(View view){
         Intent intent = new Intent(MainActivity.this, ZhimaActivity.class);
+        startActivity(intent);
+    }
+
+    public void goWaitingActivity(View view){
+        Intent intent = new Intent(MainActivity.this, WaitingActivity.class);
         startActivity(intent);
     }
 

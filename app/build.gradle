@@ -9,7 +9,7 @@ android {
         applicationId "com.example.administrator.widgets"
 
 
-        minSdkVersion 21
+        minSdkVersion 23
         targetSdkVersion 25
         versionCode 1
         versionName "1.0"

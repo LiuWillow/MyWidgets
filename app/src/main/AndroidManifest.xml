@@ -26,6 +26,7 @@
         <activity android:name=".zhima.ZhimaActivity"
             android:hardwareAccelerated="false"
             />
+        <activity android:name=".waiting.WaitingActivity"/>
     </application>
 
 </manifest>
