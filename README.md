@@ -5,7 +5,7 @@
 学习鸿洋的博客编写的图片加载框架<br>
 芝麻积分视图<br>
 加载动画<br>
-
+自定义indicator<br>
 
 
 ## Screenshots
@@ -25,6 +25,10 @@
 
 
 <img src="screenshots/waiting.gif" width="330"  hspace="20">
+
+
+<img src="screenshots/indicator.gif" width="330"  hspace="20">
+
 
 
 
