@@ -21,6 +21,8 @@
         <attr name="indicatorColor" format="color"/>
         <!--原点选中颜色-->
         <attr name="indicatorSelectColor" format="color"/>
+        <!--文字颜色-->
+        <attr name="textColor" format="color"/>
         <!--原点类型-->
         <attr name="fill_mode">
             <enum name="letter" value="0"/>
