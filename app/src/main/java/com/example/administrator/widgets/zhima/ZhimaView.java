@@ -76,6 +76,7 @@ public class ZhimaView extends View {
         anim.start();
     }
 
+
     private int calculateColor(int value){
         ArgbEvaluator evaluator = new ArgbEvaluator();
         float fraction = 0;
@@ -250,14 +251,14 @@ public class ZhimaView extends View {
 
     }
 
-    private int dp2px(float dp) {
+    public int dp2px(float dp) {
         return (int) TypedValue.applyDimension(
                 TypedValue.COMPLEX_UNIT_DIP,
                 dp,
                 getResources().getDisplayMetrics());
     }
 
-    protected int sp2px(int sp){
+    public int sp2px(int sp){
         return (int)TypedValue.applyDimension(
                 TypedValue.COMPLEX_UNIT_SP,
                 sp,

@@ -9,6 +9,7 @@ import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.widget.Button;
 
+import com.example.administrator.widgets.banner.BannerActivity;
 import com.example.administrator.widgets.chat.MsgActivity;
 import com.example.administrator.widgets.chenjintb.ChengjinActivity;
 import com.example.administrator.widgets.imgloader.LoadActivity;
@@ -55,6 +56,11 @@ public class MainActivity extends AppCompatActivity {
 
     public void goWaitingActivity(View view){
         Intent intent = new Intent(MainActivity.this, WaitingActivity.class);
+        startActivity(intent);
+    }
+
+    public void goBannerActivity(View view){
+        Intent intent = new Intent(MainActivity.this, BannerActivity.class);
         startActivity(intent);
     }
 

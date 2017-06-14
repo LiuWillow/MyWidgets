@@ -31,4 +31,10 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:onClick="goWaitingActivity"/>
+
+    <Button
+        android:text="轮转pager"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:onClick="goBannerActivity"/>
 </LinearLayout>

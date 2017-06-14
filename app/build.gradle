@@ -9,6 +9,8 @@ android {
         applicationId "com.example.administrator.widgets"
 
 
+
+
         minSdkVersion 23
         targetSdkVersion 25
         versionCode 1

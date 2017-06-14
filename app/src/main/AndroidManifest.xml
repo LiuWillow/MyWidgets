@@ -27,6 +27,7 @@
             android:hardwareAccelerated="false"
             />
         <activity android:name=".waiting.WaitingActivity"/>
+        <activity android:name=".banner.BannerActivity"/>
     </application>
 
 </manifest>

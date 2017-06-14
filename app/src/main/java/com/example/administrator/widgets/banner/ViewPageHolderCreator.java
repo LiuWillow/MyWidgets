@@ -1,0 +1,9 @@
+package com.example.administrator.widgets.banner;
+
+/**
+ * Created by Administrator on 2017/6/14.
+ */
+
+public interface ViewPageHolderCreator<VH extends ViewPageHolder> {
+    public VH createViewHolder();
+}

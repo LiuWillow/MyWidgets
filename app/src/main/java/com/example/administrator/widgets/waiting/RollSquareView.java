@@ -20,6 +20,9 @@ import android.view.animation.Interpolator;
 
 import com.example.administrator.widgets.R;
 
+import java.util.ArrayList;
+import java.util.List;
+
 /**
  * Created by Administrator on 2017/6/7.
  */
